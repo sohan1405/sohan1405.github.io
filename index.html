@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Sohan Ganesh – Flutter & Full Stack Developer</title>
+<script>document.documentElement.className="js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--w:#fff;--k:#000;--mut:#a3a3a3;--ln:rgba(255,255,255,.28);--pad:clamp(24px,6vw,96px);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--k);color:var(--w);font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.1rem;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:Syne,Manrope,system-ui,sans-serif;font-weight:800;margin:0;line-height:1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--w);outline-offset:4px;border-radius:4px}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:22px var(--pad);mix-blend-mode:difference;color:#fff}
+nav b{font-family:Syne,sans-serif;font-size:1.4rem;font-weight:800}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
+main{position:relative;z-index:1;padding:0 var(--pad);max-width:calc(min(58vw,860px) + var(--pad)*2)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:110px 0 70px;perspective:900px}
+h1{font-size:clamp(2.4rem,5vw,6.4rem);letter-spacing:-.04em;line-height:1;white-space:nowrap;width:calc(100vw - var(--pad)*2);position:relative}
+h1 .ln{display:inline-block;white-space:nowrap}
+.ch{display:inline-block;transform-origin:50% 100%;opacity:0;transform:rotateX(-95deg) translateY(30%);animation:flip .9s cubic-bezier(.2,.9,.2,1) forwards;animation-delay:calc(var(--i)*70ms + 150ms);transition:color .25s}
+@keyframes flip{to{opacity:1;transform:none}}
+.role{font-family:Syne,sans-serif;font-weight:700;font-size:clamp(1.2rem,2.4vw,1.7rem);margin:30px 0 14px}
+.sum{max-width:32em;color:var(--mut);margin:0 0 30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;border:2px solid var(--w);background:none;color:var(--w);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover,.btn.main{background:var(--w);color:var(--k)}
+.btn.main:hover{background:var(--k);color:var(--w)}
+.cue{display:flex;align-items:center;gap:14px;margin-top:56px;color:var(--mut);font-size:.95rem}
+.cue i{display:block;width:64px;height:1px;background:var(--w);transform-origin:left;animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleX(0)}60%,100%{transform:scaleX(1)}}
+section{padding:90px 0 10px}
+section>h2{font-size:clamp(2.4rem,6vw,4.6rem);letter-spacing:-.04em;margin-bottom:40px}
+.job{display:grid;grid-template-columns:11rem 1fr;gap:28px;padding:30px 0;border-top:1px solid var(--ln)}
+.job h3{font-size:1.5rem;letter-spacing:-.02em;margin-bottom:12px}
+.job time{color:var(--mut);font-weight:500}
+ul.pts{margin:0;padding-left:1.1em}ul.pts li{margin:0 0 9px;color:#d4d4d4}
+.proj{padding:30px 28px;margin:0 -28px;border-top:1px solid var(--ln);transition:background .35s,color .35s}
+.proj:hover{background:var(--w);color:var(--k)}
+.proj:hover ul.pts li,.proj:hover .stk{color:#222}
+.proj h3{font-size:clamp(1.8rem,3.6vw,2.8rem);letter-spacing:-.035em}
+.proj .for{font-weight:700;margin:10px 0 2px}
+.stk{color:var(--mut);margin:0 0 16px}
+.proj a{font-weight:700}
+.other{padding:28px 0;border-top:1px solid var(--ln);color:#d4d4d4}
+.sk{padding:22px 0;border-top:1px solid var(--ln)}
+.sk h3{font-size:1.15rem;margin-bottom:14px;color:var(--mut);font-family:Manrope,sans-serif;font-weight:500}
+.sk div{display:flex;flex-wrap:wrap;gap:10px}
+.sk span{padding:8px 18px;border:1px solid var(--w);border-radius:999px;font-weight:500;transition:background .2s,color .2s}
+.sk span:hover{background:var(--w);color:var(--k)}
+.mail{display:inline-block;font-family:Syne,sans-serif;font-weight:800;font-size:clamp(1.4rem,4.4vw,3.2rem);letter-spacing:-.03em;word-break:break-word;text-decoration:none;background:linear-gradient(var(--w),var(--w)) 0 100%/100% 3px no-repeat;transition:background-size .35s,color .35s}
+.mail:hover{background-size:100% 100%;color:var(--k)}
+.contact .btns{margin-top:30px}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
+.cg h3{font-family:Manrope,sans-serif;font-size:1rem;font-weight:500;color:var(--mut);margin-bottom:8px}.cg p{margin:0 0 6px}
+footer{position:relative;z-index:1;padding:50px var(--pad) 60px;color:var(--mut);font-size:.9rem}
+.cur{position:fixed;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:99;transition:width .25s,height .25s,left .25s,top .25s}
+.cur.big{width:64px;height:64px;left:-32px;top:-32px}
+@media (hover:none),(pointer:coarse){.cur{display:none}}
+@media (hover:hover) and (pointer:fine){body,a,button{cursor:none}}
+.js .rv{opacity:0;transform:translateY(34px);filter:blur(8px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1),filter .9s}
+.js .rv.on{opacity:1;transform:none;filter:none}
+@media (max-width:800px){main{max-width:none}h1{white-space:normal;width:auto;font-size:10vw}.job,.cg{grid-template-columns:1fr;gap:10px}nav ul{gap:14px}.hero{justify-content:flex-end;padding-top:46vh}.proj{margin:0 -16px;padding:26px 16px}}
+@media (prefers-reduced-motion:reduce){.ch,.cue i{animation:none;opacity:1;transform:none}.js .rv{opacity:1;transform:none;filter:none;transition:none}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="cur" id="cur" aria-hidden="true"></div>
+<nav><b>SG</b><ul><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+
+<main>
+  <header class="hero" id="top">
+    <h1 aria-label="Sohan Ganesh"><span class="ln" data-t>Sohan</span> <span class="ln" data-t>Ganesh</span></h1>
+    <p class="role">Flutter & Full Stack Developer</p>
+    <p class="sum">Electronics & Communication Engineering graduate, now a Platform Engineer at Purple Spark Bioengineering, building Flutter apps for Android and iOS. I built Acumen, the company’s AI clinical documentation app, with real-time speech transcription and LLM-generated SOAP notes. Based in Bengaluru and looking for mobile and full stack roles.</p>
+    <div class="btns"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+    <div class="cue"><i></i>Scroll and the stack opens up: app, API, database, cloud</div>
+  </header>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <article class="job"><div><time>Jun 2026 – now</time></div><div><h3>Platform Engineer, Purple Spark Bioengineering</h3><ul class="pts">
+      <li>Build and maintain Flutter apps for Android and iOS, from feature work through release.</li>
+      <li>Build responsive mobile UI, integrate backend REST APIs, debug and tune app performance, and manage Android and iOS deployments.</li>
+      <li>Run the Git/GitHub workflow: branching, app versioning, releases and team access. Automate builds and deployments with GitHub Actions CI/CD.</li></ul></div></article>
+    <article class="job"><div><time>Feb – May 2026</time></div><div><h3>Web Developer, Global Family Asset</h3><ul class="pts">
+      <li>Built the company website end to end (frontend, backend, database). It is live and searchable on Google.</li>
+      <li>Delivered responsive, cross-browser interfaces, fixed performance issues and deployed to production hosting.</li></ul></div></article>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <article class="proj">
+      <h3>Acumen</h3><p class="for">AI clinical documentation app</p><p class="stk">Flutter, Node.js, PostgreSQL, Digital Ocean</p>
+      <ul class="pts">
+        <li>Cross-platform Flutter app where doctors dictate post-consultation summaries and an LLM API generates structured SOAP notes.</li>
+        <li>Real-time speech-to-text through a WebSocket relay, with on-device fallback transcription for instant feedback.</li>
+        <li>Node.js/Express REST API on PostgreSQL: JWT auth, cross-device profile sync (signature, letterhead, registration number) and notes CRUD.</li>
+        <li>Word/PDF export with custom letterhead and digital signature. Backend deployed on Digital Ocean App Platform with managed PostgreSQL.</li>
+        <li>Built and maintained end to end for the company, including its website: <a href="https://myacumen.in" rel="noopener">myacumen.in</a></li>
+      </ul>
+    </article>
+    <article class="proj">
+      <h3>TYR Patient Identity</h3><p class="for">Patient ID and registration system for The Yellow Ribbon</p><p class="stk">Fastify, TypeScript, PostgreSQL, Docker, Digital Ocean</p>
+      <ul class="pts">
+        <li>Patient identity service for hospital reception that generates unique IDs and printable ID cards with QR codes.</li>
+        <li>An idempotency key and duplicate-patient check mean retried requests never create duplicate records. Load-tested with 50 parallel registrations.</li>
+        <li>iPad reception interface with search by ID, phone or name, in the client’s logo and brand theme.</li>
+      </ul>
+    </article>
+    <article class="proj">
+      <h3>Global Family Asset website</h3><p class="for">Full-stack web design and development</p><p class="stk">Live and searchable on Google</p>
+      <ul class="pts"><li>Designed, built, hosted and deployed the responsive website end to end, working across browsers and devices.</li></ul>
+    </article>
+    <p class="other"><b>Also:</b> an e-learning website for beginners in digital marketing, and a Smart Dustbin, an IoT waste segregation system.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="sk"><h3>Languages</h3><div><span>Python</span><span>JavaScript</span><span>Dart</span><span>SQL</span></div></div>
+    <div class="sk"><h3>Mobile & frontend</h3><div><span>Flutter</span><span>Android & iOS deployment</span><span>React.js</span><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>Responsive design</span></div></div>
+    <div class="sk"><h3>Backend & databases</h3><div><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>WebSockets</span><span>JWT</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span></div></div>
+    <div class="sk"><h3>AI & cloud</h3><div><span>LLM API integration</span><span>Speech-to-text</span><span>Digital Ocean</span></div></div>
+    <div class="sk"><h3>Tools</h3><div><span>Git</span><span>GitHub</span><span>GitHub Actions (CI/CD)</span><span>Postman</span><span>VS Code</span></div></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let’s talk.</h2>
+    <a class="mail" href="mailto:sohang636@gmail.com">sohang636@gmail.com</a>
+    <div class="btns"><button class="btn main" id="copy" type="button">Copy email</button><a class="btn" href="https://github.com/sohan1405">GitHub</a></div>
+    <div class="cg">
+      <div><h3>Education</h3><p>B.E. Electronics & Communication Engineering, Dayananda Sagar College, 2025</p><p>Pre-University: Narayana College. SSLC: Jyothy Kendriya Vidyalaya.</p></div>
+      <div><h3>Languages</h3><p>English, Hindi, Kannada</p><h3 style="margin-top:16px">Based in</h3><p>Bengaluru, India</p></div>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Sohan Ganesh</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("[data-t]").forEach(function(l,li){
+    var t = l.textContent; l.textContent = ""; l.setAttribute("aria-hidden","true");
+    t.split("").forEach(function(c,i){ var s = document.createElement("span"); s.className = "ch"; s.textContent = c; s.style.setProperty("--i", i + li*5); l.appendChild(s); });
+  });
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("on"); io.unobserve(e.target); } }); }, {threshold:.1});
+  document.querySelectorAll("section>h2,.job,.proj,.other,.sk,.mail,.contact .btns,.cg>div").forEach(function(e){ e.classList.add("rv"); io.observe(e); });
+
+  var cb = document.getElementById("copy");
+  cb.addEventListener("click", function(){
+    var done = function(m){ cb.textContent = m; setTimeout(function(){ cb.textContent = "Copy email"; }, 1800); };
+    try { navigator.clipboard.writeText("sohang636@gmail.com").then(function(){ done("Copied"); }, function(){ done("Copy failed"); }); }
+    catch(e){ done("Copy failed"); }
+  });
+
+  var cur = document.getElementById("cur"), px = 0, py = 0, cx = 0, cy = 0;
+  if(matchMedia("(hover:hover) and (pointer:fine)").matches){
+    addEventListener("pointermove", function(e){ px = e.clientX; py = e.clientY; });
+    document.addEventListener("pointerover", function(e){ cur.classList.toggle("big", !!e.target.closest("a,button,.proj,.sk span")); });
+    (function f(){ cx += (px-cx)*.2; cy += (py-cy)*.2; cur.style.transform = "translate("+cx+"px,"+cy+"px)"; requestAnimationFrame(f); })();
+  }
+
+  var cv = document.getElementById("gl");
+  if(!window.THREE){ cv.style.display = "none"; return; }
+  var R; try { R = new THREE.WebGLRenderer({canvas:cv, alpha:true, antialias:true}); } catch(e){ cv.style.display = "none"; return; }
+  R.setPixelRatio(Math.min(devicePixelRatio||1, 2));
+  var sc = new THREE.Scene(), cam = new THREE.PerspectiveCamera(35,1,.1,100); cam.position.z = 11;
+  var stack = new THREE.Group(); sc.add(stack);
+  var W = 3.2, D = 2.2, T = .07, layers = [], names = ["App","API","Database","Cloud"];
+
+  function lab(t){
+    var k = document.createElement("canvas"); k.width = 256; k.height = 64; var x = k.getContext("2d");
+    x.fillStyle = "#fff"; x.font = "800 36px Syne, sans-serif"; x.fillText(t, 6, 46);
+    var s = new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(k), transparent:true})); s.scale.set(1.5,.375,1); return s;
+  }
+  names.forEach(function(nm,i){
+    var g = new THREE.Group(), bx = new THREE.BoxGeometry(W,T,D);
+    g.add(new THREE.Mesh(bx, new THREE.MeshBasicMaterial({color:0x000000, polygonOffset:true, polygonOffsetFactor:1, polygonOffsetUnits:1})));
+    g.add(new THREE.LineSegments(new THREE.EdgesGeometry(bx), new THREE.LineBasicMaterial({color:0xffffff})));
+    var pts = [], n = 4 + i*2, m = Math.max(2, Math.round(n*.7)), y = T/2 + .002, a, b;
+    for(a=1;a<n;a++){ var u = -W/2 + W*a/n; pts.push(u,y,-D/2,u,y,D/2); }
+    for(b=1;b<m;b++){ var v = -D/2 + D*b/m; pts.push(-W/2,y,v,W/2,y,v); }
+    var gm = new THREE.BufferGeometry(); gm.setAttribute("position", new THREE.Float32BufferAttribute(pts,3));
+    g.add(new THREE.LineSegments(gm, new THREE.LineBasicMaterial({color:0xffffff, transparent:true, opacity:.3})));
+    var s = lab(nm); s.position.set(W/2 + .55, .1, D/2); g.add(s);
+    stack.add(g); layers.push(g);
+  });
+  var cols = [[-1.1,-.6],[.1,.5],[1.1,-.2]], lines = [], dots = [];
+  cols.forEach(function(c){
+    var lg = new THREE.BufferGeometry(); lg.setAttribute("position", new THREE.Float32BufferAttribute([c[0],-1,c[1],c[0],1,c[1]],3));
+    var l = new THREE.Line(lg, new THREE.LineBasicMaterial({color:0xffffff, transparent:true, opacity:.4})); stack.add(l); lines.push(l);
+    var d = new THREE.Mesh(new THREE.SphereGeometry(.07,10,10), new THREE.MeshBasicMaterial({color:0xffffff})); d.userData = {x:c[0], z:c[1]}; stack.add(d); dots.push(d);
+  });
+
+  var narrow;
+  function rs(){ var w = innerWidth, h = innerHeight; narrow = w < 800; R.setSize(w,h,false); cam.aspect = w/h; cam.updateProjectionMatrix(); stack.scale.setScalar(narrow ? .62 : .9); }
+  addEventListener("resize", function(){ rs(); if(reduce) draw(); }); rs();
+  var mx = 0, my = 0, tx = 0, ty = 0;
+  addEventListener("pointermove", function(e){ mx = e.clientX/innerWidth - .5; my = e.clientY/innerHeight - .5; });
+  addEventListener("scroll", function(){ if(reduce) draw(); }, {passive:true});
+
+  function draw(){
+    var t = reduce ? 2 : performance.now()/1000;
+    tx += (mx-tx)*.07; ty += (my-ty)*.07;
+    var prog = Math.min(1, scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight));
+    var gap = .7 + prog*1.1, ext = gap*1.5 + .5;
+    layers.forEach(function(g,i){ g.position.y = (1.5-i)*gap; });
+    lines.forEach(function(l){ l.scale.y = ext; });
+    dots.forEach(function(d,k){ var f = (t*.5 + k*.33) % 1; d.position.set(d.userData.x, ext - f*2*ext, d.userData.z); });
+    stack.rotation.y = .5 + prog*5.5 + tx*.6 + (reduce ? 0 : t*.1);
+    stack.rotation.x = .42 + ty*.3;
+    stack.position.set(narrow ? 0 : 3, (narrow ? 1.6 : -.5) + Math.sin(t)*.06, 0);
+    cv.style.opacity = narrow ? Math.max(.25, 1 - scrollY/innerHeight*1.1) : 1;
+    R.render(sc, cam);
+  }
+  if(reduce) draw(); else (function loop(){ draw(); requestAnimationFrame(loop); })();
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ if(reduce) draw(); });
+})();
+</script>
+</body>
+</html>
